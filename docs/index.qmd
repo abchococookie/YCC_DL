@@ -11,12 +11,12 @@ logo: section2_img/pytorchlogo.png
 ---
 ## Tensor Indexing{.smaller}
 - **indexing**: 텐서의 특정 데이터 가져오기
- <img src="section2_img/tensorindexing.png" alt="tensor_indexing" width="70%"></img> 
+ <img src="section2_img/tensorindexing.png" alt="tensor_indexing" width="60%"></img> 
 
 ## Tensor Indexing{.smaller}
 ```{python}
 #| eval: true
-#| echo: false
+#| echo: true
 import torch
 ```
 
@@ -135,7 +135,7 @@ print(data1, data3.requires_grad)
 ## Deep copy: .clone().detach(){.smaller}
 #### ※ 참고: .clone().detach() vs. .detach().clone()
 - 역할은 동일하지만 .detach().clone()이 조금 더 빠르다! ^[<a href="https://hongl.tistory.com/363">출처</a>: https://hongl.tistory.com/363]
-<img src="section2_img/detachclone.png" alt="detachclone graph"></img>
+<img src="section2_img/detachclone.png" alt="detachclone graph" width="70%"></img>
 
 ## Tensor Condition Operation: where(){.smaller}
 - torch.where(condition, if true, if false)

@@ -407,16 +407,13 @@
 <section id="tensor-indexing" class="slide level2 smaller">
 <h2>Tensor Indexing</h2>
 <ul>
-<li><strong>indexing</strong>: 텐서의 특정 데이터 가져오기 <img src="section2_img/tensorindexing.png" alt="tensor_indexing" width="70%"></li>
+<li><strong>indexing</strong>: 텐서의 특정 데이터 가져오기 <img src="section2_img/tensorindexing.png" alt="tensor_indexing" width="60%"></li>
 </ul>
 </section>
 <section id="tensor-indexing-1" class="slide level2 smaller">
 <h2>Tensor Indexing</h2>
 <div class="cell" data-execution_count="1">
-<div class="cell-output cell-output-stdout">
-<pre><code>Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
-Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> torch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2" data-code-line-numbers="|5|6|7|8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>data1 <span class="op">=</span> torch.FloatTensor([[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>], </span>
@@ -475,14 +472,14 @@ tensor([ 8.,  9., 10., 11., 12., 13., 14.])</code></pre>
 <span id="cb8-3"><a href="#cb8-3"></a><span class="bu">print</span>(data1[[<span class="dv">1</span>,<span class="dv">2</span>]])</span>
 <span id="cb8-4"><a href="#cb8-4"></a><span class="bu">print</span>(data1[[<span class="dv">2</span>,<span class="dv">1</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>tensor([[-0.7790, -0.1147,  1.0345],
-        [ 0.4259,  0.6621, -0.9304],
-        [-0.1234, -0.0284, -0.6717],
-        [-0.1160,  0.1327,  0.3649]])
-tensor([[ 0.4259,  0.6621, -0.9304],
-        [-0.1234, -0.0284, -0.6717]])
-tensor([[-0.1234, -0.0284, -0.6717],
-        [ 0.4259,  0.6621, -0.9304]])</code></pre>
+<pre><code>tensor([[ 0.0685,  0.8545,  1.1881],
+        [-1.9442, -0.3107, -0.1620],
+        [ 0.1590, -0.5537, -1.1017],
+        [-0.3544, -0.2081,  0.0572]])
+tensor([[-1.9442, -0.3107, -0.1620],
+        [ 0.1590, -0.5537, -1.1017]])
+tensor([[ 0.1590, -0.5537, -1.1017],
+        [-1.9442, -0.3107, -0.1620]])</code></pre>
 </div>
 </div>
 <ul>
@@ -491,8 +488,8 @@ tensor([[-0.1234, -0.0284, -0.6717],
 <div class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="bu">print</span>(data1[[<span class="dv">1</span>,<span class="dv">2</span>]][:, [<span class="dv">0</span>,<span class="dv">2</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>tensor([[ 0.4259, -0.9304],
-        [-0.1234, -0.6717]])</code></pre>
+<pre><code>tensor([[-1.9442, -0.1620],
+        [ 0.1590, -1.1017]])</code></pre>
 </div>
 </div>
 </section>
@@ -580,7 +577,7 @@ tensor([1., 1., 1., 1., 1.], requires_grad=True) False</code></pre>
 <h2>Deep copy: .clone().detach()</h2>
 <h4 id="참고-.clone.detach-vs.-.detach.clone-1">※ 참고: .clone().detach() vs.&nbsp;.detach().clone()</h4>
 <ul>
-<li>역할은 동일하지만 .detach().clone()이 조금 더 빠르다! <sup>1</sup> <img src="section2_img/detachclone.png" alt="detachclone graph"></li>
+<li>역할은 동일하지만 .detach().clone()이 조금 더 빠르다! <sup>1</sup> <img src="section2_img/detachclone.png" alt="detachclone graph" width="70%"></li>
 </ul>
 <aside><ol class="aside-footnotes"><li id="fn2"><p><a href="https://hongl.tistory.com/363">출처</a>: https://hongl.tistory.com/363</p></li></ol></aside></section>
 <section id="tensor-condition-operation-where" class="slide level2 smaller">
