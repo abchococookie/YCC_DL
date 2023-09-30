@@ -107,10 +107,6 @@ print(data1, data2.requires_grad)
 data3 = data1.detach()
 data3[1] = 3
 print(data1, data3.requires_grad)
-
-data4 = data1.clone().detach()
-data4[1] = 4
-print(data1, data4.requires_grad)
 ```
 
 ## Deep copy: .clone().detach(){.smaller}
