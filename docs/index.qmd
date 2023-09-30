@@ -4,7 +4,7 @@ subtitle: "텐서 인덱싱, 조건 연산 및 저장"
 author: "한지희"
 format:
   revealjs:
-    theme: default
+    embed-resources: true
 date: 2023/10/01
 footer: "YCC 딥러닝 스터디 3주차"
 logo: section2_img/pytorchlogo.png
@@ -16,7 +16,7 @@ logo: section2_img/pytorchlogo.png
 ## Tensor Indexing{.smaller}
 ```{python}
 #| eval: true
-#| echo: true
+#| echo: false
 import torch
 ```
 
