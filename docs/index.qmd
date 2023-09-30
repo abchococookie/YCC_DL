@@ -7,11 +7,7 @@ format:
     theme: default
 date: 2023/10/01
 footer: "YCC 딥러닝 스터디 3주차"
-logo: pytorchlogo.png
-document-settings:
-  fonts:
-    - name: "나눔고딕"
-      resource: "/Users/jiheehan/Library/Group Containers/UBF8T346G9.Office/FontCache/4/CloudFonts/NanumGothic/29131424179.ttf"
+logo: section2_img/pytorchlogo.png
 ---
 ## Tensor Indexing{.smaller}
 - **indexing**: 텐서의 특정 데이터 가져오기
